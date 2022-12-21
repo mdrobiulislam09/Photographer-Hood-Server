@@ -39,9 +39,11 @@ async function run() {
 
         app.get('/review', async(req, res) => {
             const query = {};
-            const product = await reviewCollection.find(query).toArray();
-            res.send(product);
+            const products = await reviewCollection.find(query).toArray();
+            res.send(products);
         })
+
+        app.put()
     }
     finally {
 
